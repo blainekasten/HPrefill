@@ -3,6 +3,10 @@
 The HonestPolicy Prefill service allows you to gather data for your
 users when they consent to it. 
 
+## Prereq's
+
+You're server must be running SSL for this to work in all browsers. Older browsers like IE8 have security concerns doing cross-domain requests and will throw an error.
+
 ## Getting Started
 
 We recommend using Bower to install the script to your local server.
