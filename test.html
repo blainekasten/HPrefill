@@ -1,0 +1,59 @@
+<!!!DOCTYPE>
+<html>
+  <head>
+    <script src="./vendor/promise-polyfill.min.js"></script>
+    <script src="./src/hp-prefill.js"></script>
+    <script>
+      "use strict";
+      function buttonClicked() {
+        var userData = {};
+
+        userData.firstName = document.getElementById('firstName').value;
+        userData.lastName = document.getElementById('lastName').value;
+        userData.address = document.getElementById('address').value;
+        userData.city = document.getElementById('city').value;
+        userData.state = document.getElementById('state').value;
+        userData.zip = document.getElementById('zip').value;
+
+        HPrefill(userData).then(function(data){
+          var div = document.getElementById('data')
+          div.innerHTML = JSON.stringify(data, null, 4);
+        })['catch'](function(error){
+          console.log('failure')
+        });
+      }
+    </script>
+  </head>
+  <body>
+
+    <h5> HPrefill! </h5>
+
+    <div>
+      FirstName <input type="text" id="firstName" />
+    </div>
+    <div>
+      LastName <input type="text" id="lastName" />
+    </div>
+
+    <div>
+      Address <input type="text" id="address" />
+    </div>
+    <div>
+      City <input type="text" id="city" />
+    </div>
+    <div>
+      State <input type="text" id="state" />
+    </div>
+    <div>
+      Zip <input type="text" id="zip" />
+    </div>
+
+    <button onclick="buttonClicked()">Go</button>
+
+    <div id='data'></div>
+
+  </body>
+</html>
+
+
+

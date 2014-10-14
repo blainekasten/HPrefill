@@ -1,0 +1,25 @@
+{
+  "name": "hp-prefill",
+  "version": "0.0.0",
+  "authors": [
+    "blainekasten <blainekasten@gmail.com>"
+  ],
+  "description": "Gathering data for a user with ease",
+  "main": "dist/hp-prefil.js",
+  "homepage": "https://github.com/honestpolicy/HPrefill.git",
+  "keywords": [
+    "HonestPolicy",
+    "HoPo",
+    "prefill",
+    "data",
+    "collection"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
